@@ -65,6 +65,7 @@ const aStar = (nodesToAnimate, pathFound) => {
   startNode.f = startNode.g + startNode.h;
 
   openList.push([startNode.f, startNode]);
+  console.log("Aa");
   console.log(openList);
 
   while (!openList.isEmpty()) {
@@ -93,7 +94,7 @@ const aStar = (nodesToAnimate, pathFound) => {
       neighbours.push(neighbour);
     });
     updateNeighbours(neighbours, currNode, "aStar", endNode);
-    console.log("astar neigh", neighbours);
+//     console.log("astar neigh", neighbours);
     for (let i = 0; i < neighbours.length; i++) {
       let neighbour = neighbours[i];
       nodesToAnimate.push([neighbour, "searching"]);
