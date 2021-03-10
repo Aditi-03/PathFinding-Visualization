@@ -65,6 +65,7 @@ const aStar = (nodesToAnimate, pathFound) => {
   startNode.f = startNode.g + startNode.h;
 
   openList.push([startNode.f, startNode]);
+  console.log(openList);
 
   while (!openList.isEmpty()) {
     var currNode = new Node();
